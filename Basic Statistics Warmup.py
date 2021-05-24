@@ -39,16 +39,19 @@ def mode():
     mode = min(d2)
     return mode
 print(mode())
+
 import math
 def standard_deviation():
-    mean = sum(list) /N
+    mean = sum(list) / N
     deviations = [(x - mean) ** 2 for x in list]
-    variance = sum(deviations) / (N-1)
+    variance = sum(deviations) / N
     standard_deviation = math.sqrt(variance)
-    return '%.2f' % standard_deviation
+    return round(standard_deviation,1)
 print(standard_deviation())
 
-
-
-
-# array = [64630, 11735, 14216, 99233, 14470, 4978, 73429, 38120, 51135, 67060]
+def confidential_interval():
+    sqrt_sample_size = math.sqrt(N)
+    a = round(mean() - (1.96 * (standard_deviation()/sqrt_sample_size)),1)
+    b = round(mean() + (1.96 * (standard_deviation()/sqrt_sample_size)),1)
+    print(a,b)
+print(confidential_interval())
