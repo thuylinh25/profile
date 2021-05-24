@@ -7,10 +7,17 @@
 # SD = (((x1-m)2+(x2-m)2+(x3-m)2+(x4-m)2+...(xN-m)2))/N)0.5
 # where xi is the ith element of the array
 # 5.Lower and Upper Boundary of the 95% Confidence Interval for the mean, separated by a space.
+# Input 
+# 10
+# 64630 11735 14216 99233 14470 4978 73429 38120 51135 67060
+# Output
+# 43900.6
+# 44627.5
+# 4978
+# 30466.9
+# 25017.0 62784.2
 
 N = int(input("Number of integer:"))
-# array = [64630, 11735, 14216, 99233, 14470, 4978, 73429, 38120, 51135, 67060]
-# print(array[1])
 list = []
 for i in range(0, N):
     ele = int(input())
